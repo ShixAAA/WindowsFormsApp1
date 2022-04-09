@@ -10,17 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form4 : Form
+    public partial class Registration : Form
     {
         Model1 db = new Model1();
-        public Form4()
+        public Registration()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            textBox2.UseSystemPasswordChar = true;
+            textBox3.UseSystemPasswordChar = true;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Значение паролей не совпадают!");
                 return;
             }
-            if ((textBox4.Text != "Директор") && (textBox4.Text != "Бухгалтер") && (textBox4.Text != "Заказчик")) 
+            if ((textBox4.Text != "Директор") && (textBox4.Text != "Бухгалтер") && (textBox4.Text != "Заказчик") && (textBox4.Text != "Менеджер")) 
             {
                 MessageBox.Show("Задана неверная роль!");
                 return ;
@@ -77,7 +79,7 @@ namespace WindowsFormsApp1
                 return;
             }
             MessageBox.Show($"Пользователь {usr.login} зарегистрирован!");
-            Form1.FORMA.Show();
+            Autorisation.FORMA.Show();
             this.Close();
             return;
         }
@@ -85,7 +87,42 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1.FORMA.Show();
+            Autorisation.FORMA.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = false;
+            textBox3.UseSystemPasswordChar = false;
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+            textBox3.UseSystemPasswordChar = true;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Вы действительно хотите выйти из программы?","Завершение программы",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -10,24 +10,26 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Autorisation : Form
     {
-        public static Form1 FORMA { get; set; }
+        public static Autorisation FORMA { get; set; }
         public static Users USER { get; set; }
         Model1 db = new Model1();
 
-        public Form1()
+        public Autorisation()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
  
         private void Form1_Load(object sender, EventArgs e)
-        {  
-            
-        }
+        {
+            textBox2.UseSystemPasswordChar = true;
+        }     
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Model1 db = new Model1();
             if (textBox1.Text == "" || textBox2.Text == "")
             {
                 MessageBox.Show("Нужно задать логин и пароль!");
@@ -35,7 +37,7 @@ namespace WindowsFormsApp1
             }
             Users usr = db.Users.Find(textBox1.Text);
             if ((usr != null) && (usr.psw == textBox2.Text))
-            {
+            {             
                 USER = usr;
                 FORMA = this;
                 if(usr.role == "Директор")
@@ -46,7 +48,7 @@ namespace WindowsFormsApp1
                 }
                 else if(usr.role == "Менеджер")
                 {
-                    Form3 frm = new Form3();
+                    ManagerForm frm = new ManagerForm();
                     frm.Show();
                     this.Hide();
                 }
@@ -60,7 +62,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4 f = new Form4();
+            Registration f = new Registration();
             FORMA = this;
             this.Hide();
             f.Show();
@@ -70,5 +72,27 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {         
+            textBox2.UseSystemPasswordChar = true;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = true;
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = false;
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = false;
+        }
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
     }
 }
+

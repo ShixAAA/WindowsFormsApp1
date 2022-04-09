@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,13 +25,22 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            label1.Text = "Добрый день, " + Form1.USER.name + " !";
+            label1.Text = "Добрый день, " + Autorisation.USER.name + " !";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1.FORMA.Show();
+            Autorisation.FORMA.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Вы действительно хотите выйти из программы?", "Завершение программы", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
