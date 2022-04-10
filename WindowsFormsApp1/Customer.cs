@@ -10,26 +10,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class ManagerForm : Form
+    public partial class Customer : Form
     {
-        public ManagerForm()
+        public Customer()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            label1.Text = "Добрый день, " + Autorisation.USER.name + " !";
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Autorisation.FORMA.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -43,11 +32,22 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Info inf = new Info();
-            inf.Show();
-            this.Hide();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Autorisation frm = new Autorisation();
+            frm.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Zakaz zakaz = new Zakaz();
+            zakaz.Show();
         }
     }
 }

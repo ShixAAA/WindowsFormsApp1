@@ -10,28 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class ManagerForm : Form
+    public partial class Zakaz : Form
     {
-        public ManagerForm()
+        Model1 db = new Model1();
+        public Zakaz()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            label1.Text = "Добрый день, " + Autorisation.USER.name + " !";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            Autorisation.FORMA.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Customer customer = new Customer();
+            customer.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -43,11 +34,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Zakaz_Load(object sender, EventArgs e)
         {
-            Info inf = new Info();
-            inf.Show();
-            this.Hide();
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sampleDataSet2.Product". При необходимости она может быть перемещена или удалена.
+            this.productTableAdapter.Fill(this.sampleDataSet2.Product);
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            db.Products.
         }
     }
 }

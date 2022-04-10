@@ -81,9 +81,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.Закрытие;
-            this.pictureBox3.Location = new System.Drawing.Point(737, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(753, 13);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(35, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -94,13 +94,15 @@
             this.button4.BackColor = System.Drawing.Color.Turquoise;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(321, 241);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(187, 44);
             this.button4.TabIndex = 20;
             this.button4.Text = "Показать информацию";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ManagerForm
             // 

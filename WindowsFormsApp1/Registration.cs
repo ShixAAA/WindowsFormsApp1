@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "") 
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || comboBox1.Text == "" || textBox5.Text == "") 
             {
                 MessageBox.Show("Нужно задать все данные!");
                 return;
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Значение паролей не совпадают!");
                 return;
             }
-            if ((textBox4.Text != "Директор") && (textBox4.Text != "Бухгалтер") && (textBox4.Text != "Заказчик") && (textBox4.Text != "Менеджер")) 
+            if (comboBox1.Text != "Заказчик") 
             {
                 MessageBox.Show("Задана неверная роль!");
                 return ;
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
             usr = new Users();
             usr.login = textBox1.Text;
             usr.psw = textBox2.Text;
-            usr.role = textBox4.Text;
+            usr.role = "Заказчик";
             usr.name = textBox5.Text;
             db.Users.Add(usr);
             try
@@ -123,6 +123,11 @@ namespace WindowsFormsApp1
             {
                 Application.Exit();
             }
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

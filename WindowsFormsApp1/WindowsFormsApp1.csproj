@@ -61,11 +61,29 @@
     <Compile Include="Autorisation.Designer.cs">
       <DependentUpon>Autorisation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
     <Compile Include="DirectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DirectorForm.Designer.cs">
       <DependentUpon>DirectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerForm.cs">
       <SubType>Form</SubType>
@@ -82,12 +100,45 @@
     <Compile Include="Model1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoleZ.Designer.cs">
+      <DependentUpon>RoleZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SampleDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SampleDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs" />
+    <Compile Include="Zakaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zakaz.Designer.cs">
+      <DependentUpon>Zakaz.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Autorisation.resx">
       <DependentUpon>Autorisation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DirectorForm.resx">
       <DependentUpon>DirectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
@@ -105,6 +156,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoleZ.resx">
+      <DependentUpon>RoleZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zakaz.resx">
+      <DependentUpon>Zakaz.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +175,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SampleDataSet.xsc">
+      <DependentUpon>SampleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SampleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SampleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SampleDataSet.xss">
+      <DependentUpon>SampleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SampleDataSet1.xsc">
+      <DependentUpon>SampleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SampleDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SampleDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SampleDataSet1.xss">
+      <DependentUpon>SampleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SampleDataSet2.xsc">
+      <DependentUpon>SampleDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SampleDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SampleDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SampleDataSet2.xss">
+      <DependentUpon>SampleDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

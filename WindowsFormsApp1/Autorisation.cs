@@ -52,6 +52,12 @@ namespace WindowsFormsApp1
                     frm.Show();
                     this.Hide();
                 }
+                else if(usr.role == "Заказчик")
+                {
+                    Customer frm = new Customer();
+                    frm.Show();
+                    this.Hide();
+                }
             }
             else
             {

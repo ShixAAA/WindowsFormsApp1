@@ -42,5 +42,17 @@ namespace WindowsFormsApp1
                 Application.Exit();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RoleZ frm = new RoleZ();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Customers cus = new Customers();
+            cus.Show();
+        }
     }
 }
