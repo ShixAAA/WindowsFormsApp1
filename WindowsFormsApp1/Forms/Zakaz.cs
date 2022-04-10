@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class Zakaz : Form
     {
         Model1 db = new Model1();
+        public static Product PRODUCT { get; set; }
         public Zakaz()
         {
             InitializeComponent();
@@ -43,7 +44,22 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            db.Products.
+            //var ProductInfo = db.Product.ToList().Find((x) => x.Title == comboBox1.Text);
+            //if (ProductInfo != null)
+            //    label4.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).Cost.ToString();
+            //    //label8.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).ArticleNumber.ToString();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+//var ProductInfo = db.Product.ToList().Find((x) => x.Title == comboBox1.Text);
+//if (ProductInfo != null)
+//    label4.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).Cost.ToString();
+//    //label8.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).ArticleNumber.ToString();
+
+
+

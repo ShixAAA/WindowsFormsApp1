@@ -12,10 +12,11 @@ namespace WindowsFormsApp1
         {
         }
 
+        public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-        }
+        }   
     }
 }

@@ -48,6 +48,7 @@ namespace WindowsFormsApp1
         {
             Zakaz zakaz = new Zakaz();
             zakaz.Show();
+            this.Hide();
         }
     }
 }

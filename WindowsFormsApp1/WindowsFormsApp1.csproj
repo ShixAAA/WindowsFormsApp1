@@ -55,55 +55,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autorisation.cs">
+    <Compile Include="Forms\Autorisation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Autorisation.Designer.cs">
+    <Compile Include="Forms\Autorisation.Designer.cs">
       <DependentUpon>Autorisation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customers.cs">
+    <Compile Include="Forms\Customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers.Designer.cs">
+    <Compile Include="Forms\Customers.Designer.cs">
       <DependentUpon>Customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorForm.cs">
+    <Compile Include="Forms\DirectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorForm.Designer.cs">
+    <Compile Include="Forms\DirectorForm.Designer.cs">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="Forms\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
+    <Compile Include="Forms\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Info.cs">
+    <Compile Include="Forms\Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info.Designer.cs">
+    <Compile Include="Forms\Info.Designer.cs">
       <DependentUpon>Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerForm.cs">
+    <Compile Include="Forms\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerForm.Designer.cs">
+    <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registration.cs">
+    <Compile Include="Model1.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registration.Designer.cs">
+    <Compile Include="Forms\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoleZ.cs">
+    <Compile Include="Forms\RoleZ.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RoleZ.Designer.cs">
+    <Compile Include="Forms\RoleZ.Designer.cs">
       <DependentUpon>RoleZ.cs</DependentUpon>
     </Compile>
     <Compile Include="SampleDataSet.Designer.cs">
@@ -122,28 +123,28 @@
       <DependentUpon>SampleDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Users.cs" />
-    <Compile Include="Zakaz.cs">
+    <Compile Include="Forms\Zakaz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Zakaz.Designer.cs">
+    <Compile Include="Forms\Zakaz.Designer.cs">
       <DependentUpon>Zakaz.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Autorisation.resx">
+    <EmbeddedResource Include="Forms\Autorisation.resx">
       <DependentUpon>Autorisation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers.resx">
+    <EmbeddedResource Include="Forms\Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorForm.resx">
+    <EmbeddedResource Include="Forms\DirectorForm.resx">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Info.resx">
+    <EmbeddedResource Include="Forms\Info.resx">
       <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerForm.resx">
+    <EmbeddedResource Include="Forms\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registration.resx">
+    <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -156,13 +157,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Customer.resx">
+    <EmbeddedResource Include="Forms\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoleZ.resx">
+    <EmbeddedResource Include="Forms\RoleZ.resx">
       <DependentUpon>RoleZ.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Zakaz.resx">
+    <EmbeddedResource Include="Forms\Zakaz.resx">
       <DependentUpon>Zakaz.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -33,6 +33,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleDataSet2 = new WindowsFormsApp1.SampleDataSet2();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,12 +43,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.sampleDataSet2 = new WindowsFormsApp1.SampleDataSet2();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter = new WindowsFormsApp1.SampleDataSet2TableAdapters.ProductTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -98,6 +98,16 @@
             this.comboBox1.TabIndex = 23;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            this.productBindingSource.DataSource = this.sampleDataSet2;
+            // 
+            // sampleDataSet2
+            // 
+            this.sampleDataSet2.DataSetName = "SampleDataSet3";
+            this.sampleDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -129,6 +139,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 23);
             this.label4.TabIndex = 27;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -187,16 +198,6 @@
             this.label8.Size = new System.Drawing.Size(121, 23);
             this.label8.TabIndex = 32;
             // 
-            // sampleDataSet2
-            // 
-            this.sampleDataSet2.DataSetName = "SampleDataSet2";
-            this.sampleDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            this.productBindingSource.DataSource = this.sampleDataSet2;
-            // 
             // productTableAdapter
             // 
             this.productTableAdapter.ClearBeforeFill = true;
@@ -226,8 +227,8 @@
             this.Text = "Zakaz";
             this.Load += new System.EventHandler(this.Zakaz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
