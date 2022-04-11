@@ -39,11 +39,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.productTableAdapter = new WindowsFormsApp1.SampleDataSet2TableAdapters.ProductTableAdapter();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sampleDataSet2)).BeginInit();
@@ -56,7 +58,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(601, 394);
+            this.button3.Location = new System.Drawing.Point(15, 394);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(187, 44);
             this.button3.TabIndex = 4;
@@ -91,10 +93,11 @@
             // 
             this.comboBox1.DataSource = this.productBindingSource;
             this.comboBox1.DisplayMember = "Title";
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(240, 122);
+            this.comboBox1.Location = new System.Drawing.Point(125, 91);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 23;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -113,7 +116,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(157, 120);
+            this.label3.Location = new System.Drawing.Point(42, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 23);
             this.label3.TabIndex = 25;
@@ -124,7 +127,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(148, 156);
+            this.label1.Location = new System.Drawing.Point(33, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 23);
             this.label1.TabIndex = 26;
@@ -135,7 +138,7 @@
             this.label4.BackColor = System.Drawing.Color.Turquoise;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(240, 156);
+            this.label4.Location = new System.Drawing.Point(125, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 23);
             this.label4.TabIndex = 27;
@@ -146,21 +149,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(598, 64);
+            this.label5.Location = new System.Drawing.Point(494, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 23);
             this.label5.TabIndex = 28;
             this.label5.Text = "Заказ:";
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Turquoise;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(598, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 202);
-            this.label6.TabIndex = 29;
             // 
             // button1
             // 
@@ -169,12 +162,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(174, 233);
+            this.button1.Location = new System.Drawing.Point(59, 202);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 44);
             this.button1.TabIndex = 30;
             this.button1.Text = "Добавить товар в заказ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -182,7 +176,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label7.ForeColor = System.Drawing.Color.Transparent;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Location = new System.Drawing.Point(167, 191);
+            this.label7.Location = new System.Drawing.Point(52, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 23);
             this.label7.TabIndex = 31;
@@ -193,7 +187,7 @@
             this.label8.BackColor = System.Drawing.Color.Turquoise;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(240, 191);
+            this.label8.Location = new System.Drawing.Point(125, 160);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 23);
             this.label8.TabIndex = 32;
@@ -202,16 +196,52 @@
             // 
             this.productTableAdapter.ClearBeforeFill = true;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Turquoise;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
+            this.richTextBox1.Location = new System.Drawing.Point(503, 89);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox1.Size = new System.Drawing.Size(263, 212);
+            this.richTextBox1.TabIndex = 33;
+            this.richTextBox1.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Turquoise;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(503, 332);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(159, 23);
+            this.label6.TabIndex = 34;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.ForeColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(503, 309);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(119, 23);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Заказ на сумму:";
+            // 
             // Zakaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._1612170760_191_p_fon_gradient_sinii_fioletovii_230;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -224,7 +254,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Zakaz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Zakaz";
+            this.Text = "kkkkklll";
             this.Load += new System.EventHandler(this.Zakaz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
@@ -244,12 +274,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private SampleDataSet2 sampleDataSet2;
         private System.Windows.Forms.BindingSource productBindingSource;
         private SampleDataSet2TableAdapters.ProductTableAdapter productTableAdapter;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
     }
 }

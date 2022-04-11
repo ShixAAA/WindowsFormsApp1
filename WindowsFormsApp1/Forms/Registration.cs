@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
         {
             textBox2.UseSystemPasswordChar = true;
             textBox3.UseSystemPasswordChar = true;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -126,6 +127,11 @@ namespace WindowsFormsApp1
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

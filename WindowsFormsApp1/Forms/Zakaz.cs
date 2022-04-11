@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class Zakaz : Form
     {
         Model1 db = new Model1();
+        public static int sum = 0;
         public static Product PRODUCT { get; set; }
         public Zakaz()
         {
@@ -39,27 +40,34 @@ namespace WindowsFormsApp1
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sampleDataSet2.Product". При необходимости она может быть перемещена или удалена.
             this.productTableAdapter.Fill(this.sampleDataSet2.Product);
+            comboBox1.Text = "";
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //var ProductInfo = db.Product.ToList().Find((x) => x.Title == comboBox1.Text);
-            //if (ProductInfo != null)
-            //    label4.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).Cost.ToString();
-            //    //label8.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).ArticleNumber.ToString();
+            var ProductInfo = db.Product.ToList().Find((x) => x.Title == comboBox1.Text);
+            if (ProductInfo != null)
+            {
+                label4.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).Cost.ToString();
+                label8.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).ArticleNumber.ToString();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = richTextBox1.Text + comboBox1.Text + "\n";
+            sum += Convert.ToInt32(label4.Text);
+            label6.Text = sum.ToString() + "₽";
+        }
     }
 }
-//var ProductInfo = db.Product.ToList().Find((x) => x.Title == comboBox1.Text);
-//if (ProductInfo != null)
-//    label4.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).Cost.ToString();
-//    //label8.Text = db.Product.ToList().Find((x) => x.Title == comboBox1.Text).ArticleNumber.ToString();
+
 
 
 
