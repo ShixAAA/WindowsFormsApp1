@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {           
+        {
             Users usr = db.Users.Find(comboBox1.Text);
             usr.role = comboBox2.Text;
             try
@@ -44,8 +44,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.Message);
                 return;
             }
-            MessageBox.Show($"Роль изменена на {usr.role}!");           
-        }
+            MessageBox.Show($"Роль изменена на {usr.role}!");
+        }               
 
         private void button3_Click(object sender, EventArgs e)
         {

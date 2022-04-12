@@ -91,6 +91,12 @@
     <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InfoZakaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InfoZakaz.Designer.cs">
+      <DependentUpon>InfoZakaz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Forms\Registration.cs">
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Info.resx">
       <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InfoZakaz.resx">
+      <DependentUpon>InfoZakaz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>

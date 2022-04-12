@@ -54,5 +54,12 @@ namespace WindowsFormsApp1
             Customers cus = new Customers();
             cus.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Info inf = new Info();
+            inf.Show();
+            this.Hide();
+        }
     }
 }

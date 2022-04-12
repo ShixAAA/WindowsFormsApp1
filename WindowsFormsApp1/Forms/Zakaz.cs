@@ -64,6 +64,13 @@ namespace WindowsFormsApp1
             richTextBox1.Text = richTextBox1.Text + comboBox1.Text + "\n";
             sum += Convert.ToInt32(label4.Text);
             label6.Text = sum.ToString() + "₽";
+            
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
