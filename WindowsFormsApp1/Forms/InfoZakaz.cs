@@ -12,12 +12,6 @@ namespace WindowsFormsApp1
 {
     public partial class InfoZakaz : Form
     {
-        public static List<InfoZakaz> parts = new List<InfoZakaz>();
-        public string TITLE { get; set; }
-        public string ARCTICLE { get; set; }
-        public string COST { get; set; }
-
-
         Model1 db = new Model1();
         public InfoZakaz()
         {
@@ -28,6 +22,18 @@ namespace WindowsFormsApp1
         private void InfoZakaz_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            InfoZakaz infoZakaz = new InfoZakaz();
+            infoZakaz.Show();
         }
     }
 }

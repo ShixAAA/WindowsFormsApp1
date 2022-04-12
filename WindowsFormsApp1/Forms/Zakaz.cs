@@ -61,19 +61,28 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = richTextBox1.Text + comboBox1.Text + "\n";
-            sum += Convert.ToInt32(label4.Text);
-            label6.Text = sum.ToString() + "₽";
-            
-            
+            if (label8.Text == "" || label4.Text == "")
+            {
+                MessageBox.Show("Нельзя оставить поле пустым!");
+            }
+            else
+            {
+                richTextBox1.Text = richTextBox1.Text + comboBox1.Text + "\n";
+                sum += Convert.ToInt32(label4.Text);
+                label6.Text = sum.ToString() + "₽";
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //InfoZakaz infoZakaz = new InfoZakaz();
+            //infoZakaz.Show();
+            //InfoZakaz.dataGridView1.Rows.Add(comboBox1.Text, label8.Text, label4.Text);
         }
     }
-}
+}           
+
 
 
 
