@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
         Model1 db = new Model1();
         public static int sum = 0;
-        public static Product PRODUCT { get; set; }
+        public static List<Product> products = new List<Product>();
         public Zakaz()
         {
             InitializeComponent();
@@ -61,6 +61,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            products.Add(Model1.getContext().Product.ToList().Find((x) => x.Title == comboBox1.Text));
             if (label8.Text == "" || label4.Text == "")
             {
                 MessageBox.Show("Нельзя оставить поле пустым!");
@@ -76,8 +77,11 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //InfoZakaz infoZakaz = new InfoZakaz();
-            //infoZakaz.Show();
+            InfoZakaz infoZakaz = new InfoZakaz();
+            infoZakaz.Show();
+            this.Close();
+            InfoZakaz.dataGridView1.AutoGenerateColumns = true;
+            InfoZakaz.dataGridView1.DataSource = products;
             //InfoZakaz.dataGridView1.Rows.Add(comboBox1.Text, label8.Text, label4.Text);
         }
     }

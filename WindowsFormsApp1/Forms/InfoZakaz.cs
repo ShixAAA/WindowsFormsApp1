@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
 
         private void InfoZakaz_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            InfoZakaz infoZakaz = new InfoZakaz();
+            Zakaz infoZakaz = new Zakaz();
             infoZakaz.Show();
         }
     }
